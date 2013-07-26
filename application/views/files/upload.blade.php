@@ -66,7 +66,7 @@
         <div class="span11 welcome-intro" id="fileupload_instruct">
             <div class="welcome-icon"><i class="ss-textfile"></i></div>
             <h2>DRAG AND DROP YOUR FILES HERE TO GET STARTED</h3>
-            <h3 class="light-small">ACCEPTED FILE TYPES: VALID 7X50 TECH SUPPORT FILE IN RELEASE 9.0 AND ABOVE</h2>
+            <h3 class="light-small">ACCEPTED FILE TYPES: VALID JSON FILE WITH PROPER FORMAT</h2>
         </div>
 
         <!-- The loading indicator is shown during file processing -->
