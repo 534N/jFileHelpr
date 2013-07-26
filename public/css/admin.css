@@ -1,0 +1,138 @@
+
+body > div.container {
+	background: #ffffff;
+}
+body > div.file-container {
+	background: #bec2c9;
+}
+
+thead > tr > th:first-child {
+	width: 92%;
+}
+tbody > tr > td:last-child, thead > tr > th:last-child {
+	text-align: right;
+	padding-right: 15px;
+}
+tbody > tr > td:first-child {
+	padding-left: 15px;
+}
+
+ul.nav-tabs > li > a.disabled {
+	color: #d3d3d3 !important;
+}
+tbody > tr > td:first-child {
+	padding-left: 6px;
+}
+table img {
+	width: 20px;
+}
+table.course-list tbody > tr > td > span {
+	font-size: 16px;
+	line-height: 30px;
+	padding-left: 15px;
+}
+
+tbody > tr > td:last-child {
+	padding-top: 15px;
+	/*padding-right: 18px;*/
+}
+
+form {
+	margin-bottom: 0px;
+}
+div.form label {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+div.form label:first-child {
+	margin-top: 0px;
+}
+div.form input[type="text"] {
+	font-size: 13px;
+	color: #8e8d8d;
+	padding: 11px 15px 10px 10px;
+	background-color: #ffffff;
+	width: 97%;
+	display: block;
+	margin: 0;
+	box-shadow: inset 2px 2px 4px #f1f1f1;
+}
+
+div.form .error input[type="text"] {
+	color: #b74648;
+}
+
+div.form textarea {
+	width: 98%;
+	resize: none;
+	margin-bottom: 0px;
+}
+ul.nav-tabs {
+	padding: 20px 0 0px 0px;
+	font-weight: 400;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.625em;
+	border-bottom: 0;
+}
+
+span.checkbox {
+	margin-top: 5px;
+	display: block;
+	padding-left: 0px;
+}
+span.checkbox > input[type='checkbox'] {
+	opacity: 0;
+	float: left;
+	/*width: 15px;*/
+	/*display: none;*/
+}
+span.checkbox > input[type='checkbox'] + label {    
+	clear: none;
+	height: 15px; 
+	display: block;
+	padding: 0 0 0 22px;
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.2em;
+	background: url(../img/check.png) no-repeat 0 0;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+span.checkbox > input[type='checkbox']:checked + label {	
+	background-position: 0 -15px;
+}
+div#delete-info input[type='text'] {
+	display: inline;
+	width: 712px;
+	margin-bottom: 10px;
+}
+div.input-append input[type='submit'], div.input-append > a {
+	padding: 11px 10px 10px 10px;
+}
+div#userlist td:last-child {
+	padding-right: 15px;
+	padding-top: 5px;
+}
+td.user-new > a {
+	text-decoration: none;
+	display:block;
+	text-align: left;
+}
+.table:hover tbody tr:hover td.cat-new {
+	background-color: #eefbff;	
+}
+div#userlist td.user-options {
+	padding: 5px;
+}
+div#userlist td.user-options > div {
+	margin-bottom: 0px;
+}
+
+div#userlist td:last-child {
+	width: 40px;
+}
+div#userlist td.user-options > div > a {
+	font-size: 14px;
+	padding: 3px 5px;
+}

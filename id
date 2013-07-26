@@ -1,0 +1,103 @@
+application/views/admin/users/user-delete.blade.php:    <li>{{ HTML::link('admin/user/'.$user->id, $user->username) }} <span class="divider">&raquo;</span></li>
+application/views/admin/users/user-delete.blade.php:	<li>{{ HTML::link('admin/user/'.$user->id, 'General') }}</li>
+application/views/admin/users/user-delete.blade.php:	<li>{{ HTML::link('admin/user/'.$user->id.'/files', 'Files') }}</li>
+application/views/admin/users/user-delete.blade.php:		{{ Form::open('admin/user/'.$user->id.'/delete','POST',array('class' => 'form-horizontal')) }}
+application/views/admin/users/userlist.blade.php:				<span>{{ $user->username }}</span>
+application/views/admin/users/userlist.blade.php:			<td class="user-options">
+application/views/admin/users/userlist.blade.php:					{{ HTML::link('admin/user/'.$user->id,'', array('class' => 'btn append icon-edit')) }}
+application/views/admin/users/userlist.blade.php:			<td colspan="2" class="user-new">
+application/views/admin/users/user-files.blade.php:    <li>{{ HTML::link('admin/user/'.$user->id, $user->username) }} <span class="divider">&raquo;</span></li>
+application/views/admin/users/user-files.blade.php:    <li>{{ HTML::link('admin/user/'.$user->id, 'General') }}</li>
+application/views/admin/users/user-files.blade.php:    <li>{{ HTML::link('admin/user/'.$user->id.'/delete', 'Delete') }}</li>
+application/views/admin/users/user-files.blade.php:        {{ Form::open_for_files('admin/user/'.$user->id.'/upload/','POST',array('id' => 'fileupload')) }}
+application/views/admin/users/user-general.blade.php:    <li>{{ HTML::link('admin/user/'.$user->id, $user->username) }} <span class="divider">&raquo;</span></li>
+application/views/admin/users/user-general.blade.php:	<li>{{ HTML::link('admin/user/'.$user->id.'/files', 'Files') }}</li>
+application/views/admin/users/user-general.blade.php:	<li>{{ HTML::link('admin/user/'.$user->id.'/delete', 'Delete') }}</li>
+application/views/admin/users/user-general.blade.php:			{{ Form::open('admin/user/'.$user->id.'/general') }}
+application/views/admin/users/user-general.blade.php:				{{ Form::text('username', input_value($user->username,Input::old('username'))) }}
+application/controllers/upload.php:			'upload_dir' 	=> Config::get('site.user_upload_path') . $user->folder . DS,
+application/controllers/upload.php:			'upload_url' 	=> URL::base() . DS .Config::get('site.user_upload_url') . $user->folder . DS,
+application/controllers/admin.php:		if ($id === 'new') return View::make('admin.users.user-new');
+application/controllers/users.php:					return View::make('admin.users.user-delete')->with($data);
+application/controllers/users.php:					return View::make('admin.users.user-files')->with($data);
+application/controllers/users.php:					return View::make('admin.users.user-general')->with($data);
+application/controllers/users.php:					return Redirect::to('admin/user')->with('user_id',$user->id);
+application/controllers/users.php:			return View::make('admin.users.user-new')->with('alert','alert-error')
+application/controllers/users.php:				$user->username 	= 	$form['username'];
+application/controllers/users.php:				$user->folder 		=	$user_folder;
+application/controllers/users.php:				$user->save();
+application/controllers/users.php:				return Redirect::to('admin/user/'.$user->id)->with('user', $user)
+application/controllers/users.php:						'username'		=>	'required|max:100|unique:users,username,'.$user->id,
+application/controllers/users.php:			return View::make('admin.users.user-general')->with('user', $user)
+application/controllers/users.php:			$user->username 	= 	$form['username'];
+application/controllers/users.php:			$user->save();
+application/controllers/users.php:			return View::make('admin.users.user-general')->with('user', $user)
+application/controllers/users.php:			return View::make('admin.users.user-delete')->with('user', $user)
+application/controllers/users.php:			$user->delete();
+application/controllers/users.php:			removeDirectory(Config::get('site.user_upload_path').$user->folder);
+laravel/documentation/events.md:	Event::queue('foo', $user->id, array($user));
+laravel/documentation/database/eloquent.md:	echo $user->email;
+laravel/documentation/database/eloquent.md:	     echo $user->email;
+laravel/documentation/database/eloquent.md:	$user->email = 'example@gmail.com';
+laravel/documentation/database/eloquent.md:	$user->password = 'secret';
+laravel/documentation/database/eloquent.md:	$user->save();
+laravel/documentation/database/eloquent.md:	$user->email = 'new_email@gmail.com';
+laravel/documentation/database/eloquent.md:	$user->password = 'new_secret';
+laravel/documentation/database/eloquent.md:	$user->save();
+laravel/documentation/database/eloquent.md:	echo Phone::find(1)->user->email;
+laravel/documentation/database/eloquent.md:	$user->roles()->insert($role);
+laravel/documentation/database/eloquent.md:	$user->roles()->attach($role_id);
+laravel/documentation/database/eloquent.md:	$user->roles()->attach($role_id, array('expires' => $expires));
+laravel/documentation/database/eloquent.md:	$user->roles()->sync(array(1, 2, 3));
+laravel/documentation/database/eloquent.md:	$pivot = $user->roles()->pivot();
+laravel/documentation/database/eloquent.md:	foreach ($user->roles()->pivot()->get() as $row)
+laravel/documentation/database/eloquent.md:	foreach ($user->roles as $role)
+laravel/documentation/database/eloquent.md:	$user->roles()->delete();
+laravel/documentation/database/eloquent.md:	$user->save();
+laravel/documentation/database/eloquent.md:	$user->fill(array(
+laravel/documentation/database/eloquent.md:	$user->save();
+laravel/documentation/database/eloquent.md:> **Note:** Utmost caution should be taken when mass-assigning using user-input. Technical oversights could cause serious security vulnerabilities.
+laravel/documentation/database/eloquent.md:	return json_encode($user->to_array());
+laravel/auth/drivers/fluent.php:		if ( ! is_null($user) and Hash::check($password, $user->{$password_field}))
+laravel/auth/drivers/fluent.php:			return $this->login($user->id, array_get($arguments, 'remember'));
+laravel/auth/drivers/eloquent.php:		if ( ! is_null($user) and Hash::check($password, $user->get_attribute($password_field)))
+laravel/auth/drivers/eloquent.php:			return $this->login($user->id, array_get($arguments, 'remember'));
+laravel/tests/cases/auth.test.php:		$user->id = 10;
+laravel/tests/cases/auth.test.php:		$this->assertEquals(10, $user->id);
+laravel/tests/cases/auth.test.php:			'user'     => $user->id,
+public/css/font-awesome-ie7.css:.icon-user-md {
+public/css/admin.css:td.user-new > a {
+public/css/admin.css:div#userlist td.user-options {
+public/css/admin.css:div#userlist td.user-options > div {
+public/css/admin.css:div#userlist td.user-options > div > a {
+public/css/font-awesome.css:.icon-user-md:before              { content: "\f200"; }
+storage/views/fdc6383854284fb49d2c44e1af327aed:    <li><?php echo  HTML::link('admin/user/'.$user->id, $user->username) ; ?> <span class="divider">&raquo;</span></li>
+storage/views/fdc6383854284fb49d2c44e1af327aed:	<li><?php echo  HTML::link('admin/user/'.$user->id.'/files', 'Files') ; ?></li>
+storage/views/fdc6383854284fb49d2c44e1af327aed:	<li><?php echo  HTML::link('admin/user/'.$user->id.'/delete', 'Delete') ; ?></li>
+storage/views/fdc6383854284fb49d2c44e1af327aed:			<?php echo  Form::open('admin/user/'.$user->id.'/general') ; ?>
+storage/views/fdc6383854284fb49d2c44e1af327aed:				<?php echo  Form::text('username', input_value($user->username,Input::old('username'))) ; ?>
+storage/views/0767f7872fc40d2deaca64542d32c93b:				<span><?php echo  $user->username ; ?></span>
+storage/views/0767f7872fc40d2deaca64542d32c93b:			<td class="user-options">
+storage/views/0767f7872fc40d2deaca64542d32c93b:					<?php echo  HTML::link('admin/user/'.$user->id,'', array('class' => 'btn append icon-edit')) ; ?>
+storage/views/0767f7872fc40d2deaca64542d32c93b:			<td colspan="2" class="user-new">
+storage/views/b4d4871fbcab7a37db21180d0bf0d06f:    <li><?php echo  HTML::link('admin/user/'.$user->id, $user->username) ; ?> <span class="divider">&raquo;</span></li>
+storage/views/b4d4871fbcab7a37db21180d0bf0d06f:    <li><?php echo  HTML::link('admin/user/'.$user->id, 'General') ; ?></li>
+storage/views/b4d4871fbcab7a37db21180d0bf0d06f:    <li><?php echo  HTML::link('admin/user/'.$user->id.'/delete', 'Delete') ; ?></li>
+storage/views/b4d4871fbcab7a37db21180d0bf0d06f:        <?php echo  Form::open_for_files('admin/user/'.$user->id.'/upload/','POST',array('id' => 'fileupload')) ; ?>
+storage/views/5b7c29e25488f2c2fc856ad95cbfb545:    <li><?php echo  HTML::link('admin/user/'.$user->id, $user->username) ; ?> <span class="divider">&raquo;</span></li>
+storage/views/5b7c29e25488f2c2fc856ad95cbfb545:    <li><?php echo  HTML::link('admin/user/'.$user->id, 'General') ; ?></li>
+storage/views/5b7c29e25488f2c2fc856ad95cbfb545:    <li><?php echo  HTML::link('admin/user/'.$user->id.'/delete', 'Delete') ; ?></li>
+storage/views/5b7c29e25488f2c2fc856ad95cbfb545:        <?php echo  Form::open_for_files('admin/user/'.$user->id.'/upload/','POST',array('id' => 'fileupload')) ; ?>
+storage/views/b0f9091f0006d7c878d3cb99ac9a5bd4:    <li><?php echo  HTML::link('admin/user/'.$user->id, $user->username) ; ?> <span class="divider">&raquo;</span></li>
+storage/views/b0f9091f0006d7c878d3cb99ac9a5bd4:	<li><?php echo  HTML::link('admin/user/'.$user->id, 'General') ; ?></li>
+storage/views/b0f9091f0006d7c878d3cb99ac9a5bd4:	<li><?php echo  HTML::link('admin/user/'.$user->id.'/files', 'Files') ; ?></li>
+storage/views/b0f9091f0006d7c878d3cb99ac9a5bd4:		<?php echo  Form::open('admin/user/'.$user->id.'/delete','POST',array('class' => 'form-horizontal')) ; ?>
+storage/views/6de7606da1e720223b75e0887e86c49d:    <li><?php echo  HTML::link('admin/user/'.$user->id, $user->username) ; ?> <span class="divider">&raquo;</span></li>
+storage/views/6de7606da1e720223b75e0887e86c49d:	<li><?php echo  HTML::link('admin/user/'.$user->id.'/files', 'Files') ; ?></li>
+storage/views/6de7606da1e720223b75e0887e86c49d:	<li><?php echo  HTML::link('admin/user/'.$user->id.'/delete', 'Delete') ; ?></li>
+storage/views/6de7606da1e720223b75e0887e86c49d:			<?php echo  Form::open('admin/user/'.$user->id.'/general') ; ?>
+storage/views/6de7606da1e720223b75e0887e86c49d:				<?php echo  Form::text('username', input_value($user->username,Input::old('username'))) ; ?>
+storage/views/471429842d015bcf17ec4c85b8b677fa:				<span><?php echo  $user->username ; ?></span>
+storage/views/471429842d015bcf17ec4c85b8b677fa:			<td class="user-options">
+storage/views/471429842d015bcf17ec4c85b8b677fa:					<?php echo  HTML::link('admin/user/'.$user->id,'', array('class' => 'btn append icon-edit')) ; ?>
+storage/views/471429842d015bcf17ec4c85b8b677fa:			<td colspan="2" class="user-new">

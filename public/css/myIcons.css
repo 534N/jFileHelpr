@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'icomoon';
+  src:url('../font/myIcons.eot');
+  src:url('../font/myIcons.eot?#iefix') format('embedded-opentype'),
+    url('../font/myIcons.woff') format('woff'),
+    url('../font/myIcons.ttf') format('truetype'),
+    url('../font/myIcons.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-logo:before, .icon-thermo:before, .icon-cloud:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-logo:before {
+  font-size:300%;
+  content: "\21";
+}
+.icon-thermo:before {
+  font-size: 300%;
+  color: red;
+  content: "\22";
+}
+.icon-cloud:before {
+  font-size: 500%;
+  color: #87CEFA;
+  content: "\23";
+}
+.icon-doc1:before {
+  fonts-size: 100%;
+  content "\24";
+}

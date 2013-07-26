@@ -1,0 +1,101 @@
+
+* ======== Google Charts ========== *
+
+
+Terms of Service
+
+Last modified: May 10, 2013
+By using this API, you consent to be bound by these terms in addition to the Google APIs Terms of Service ("API ToS") at https://developers.google.com/terms.
+Deprecation Policy
+
+Google will announce if it intends to discontinue or make backwards incompatible changes to this API or Service. Google will use commercially reasonable efforts to continue to operate those Google Chart Tools versions and features identified at http://developers.google.com/chart/chart-api-list without these changes until April 20, 2015, unless (as Google determines in its reasonable good faith judgment):
+
+required by law or third party relationship (including if there is a change in applicable law or relationship), or
+doing so could create a security risk or substantial economic or material technical burden.
+The above policy is the "Deprecation Policy."
+
+After April 20, 2015, this Deprecation Policy will not apply. 
+
+* ======== Laravel ========== *
+
+MIT license
+
+* ======== JQUERY FILE UPLOADER ========== *
+
+MIT License
+
+Copyright (c) <2012> <Taylor Otwell> <taylorotwell@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Developer’s Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the best
+    of my knowledge, is covered under an appropriate open source
+    license and I have the right under that license to submit that
+    work with modifications, whether created in whole or in part
+    by me, under the same open source license (unless I am
+    permitted to submit under a different license), as indicated
+    in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including all
+    personal information I submit with it, including my sign-off) is
+    maintained indefinitely and may be redistributed consistent with
+    this project or the open source license(s) involved.
+
+
+* ======== Bootstrap Code licensed under Apache License v2.0 ========== *
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+
+* ======== Glyphicons Free licensed under CC BY 3.0. ========== *
+
+
+You are free:
+
+to Share — to copy, distribute and transmit the work
+to Remix — to adapt the work
+to make commercial use of the work
+Under the following conditions:
+
+Attribution — You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).
+With the understanding that:
+
+Waiver — Any of the above conditions can be waived if you get permission from the copyright holder.
+Public Domain — Where the work or any of its elements is in the public domain under applicable law, that status is in no way affected by the license.
+Other Rights — In no way are any of the following rights affected by the license:
+Your fair dealing or fair use rights, or other applicable copyright exceptions and limitations;
+The author's moral rights;
+Rights other persons may have either in the work itself or in how the work is used, such as publicity or privacy rights.
+Notice — For any reuse or distribution, you must make clear to others the license terms of this work. The best way to do this is with a link to this web page.
+
+
+
+

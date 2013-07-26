@@ -1,0 +1,196 @@
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.treeview ul {
+	background-color: white;
+	/*margin-top: 4px;*/
+}
+
+.treeview .hitarea {
+	background: url(../img/treeview/treeview-default.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+.treeview a.selected {
+	background-color: #eee;
+}
+
+/* -------- tree item arrow box */
+
+#tree_item {
+	/*color: #0088cc;*/
+	cursor: pointer;
+	color: #888;
+}
+#tree_item2 {
+	/*color: #0088cc;*/
+	cursor: pointer;
+	color: #888;
+}
+#tree_item_match {
+	/*color: #0088cc;*/
+	cursor: pointer;
+	color: #888;
+	margin-left: 15px;
+}
+#tree_item a{
+	color:#555;
+	text-decoration: none;
+}
+
+.tree_item_hover,
+.tree_item_match_hover {
+	position: relative;
+	background: #eee;
+	color: #0088cc;
+}
+#tree_item_active a {
+	color: #fff !important;
+	text-decoration: none;
+}
+
+.tree_item_hover:after {
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.tree_item_match_hover:after {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tree_item_hover:after {
+	border-color: rgba(238, 238, 238, 0);
+	border-left-color: #eee;
+	border-width: 13px;
+	top: 50%;
+	margin-top: -13px;
+}
+.tree_item_match_hover:after {
+	border-color: rgba(238, 238, 238, 0);
+	border-right-color: #eee;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+
+#tree_item_active {
+	position: relative;
+	background: #0088cc;
+	color: #fff !important;
+}
+#tree_item_active:after {
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#tree_item_active:after {
+	border-color: rgba(0, 136, 204, 0);
+	border-left-color: #0088cc;
+	border-width: 14px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+#tree_item_match_active {
+	position: relative;
+	background: yellow;
+	color: #333;
+	margin-left: 15px;
+	font-weight: bold;
+}
+#tree_item_match_active:after {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#tree_item_match_active:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: yellow;
+	border-width: 11px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+/* -------- END */
+
+
+
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: red; cursor: pointer; }
+
+.treeview li {  }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(../img/treeview/treeview-default.gif); }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+.treeview-red li { background-image: url(../img/treeview/treeview-red-line.gif); }
+.treeview-red .hitarea, .treeview-red li.lastCollapsable, .treeview-red li.lastExpandable { background-image: url(../img/treeview/treeview-red.gif); } 
+
+.treeview-black li { background-image: url(../img/treeview/treeview-black-line.gif); }
+.treeview-black .hitarea, .treeview-black li.lastCollapsable, .treeview-black li.lastExpandable { background-image: url(../img/treeview/treeview-black.gif); }  
+
+.treeview-gray li { background-image: url(../img/treeview/treeview-gray-line.gif); }
+.treeview-gray .hitarea, .treeview-gray li.lastCollapsable, .treeview-gray li.lastExpandable { background-image: url(../img/treeview/treeview-gray.gif); } 
+
+.treeview-famfamfam li { background-image: url(../img/treeview/treeview-famfamfam-line.gif); }
+.treeview-famfamfam .hitarea, .treeview-famfamfam li.lastCollapsable, .treeview-famfamfam li.lastExpandable { background-image: url(../img/treeview/treeview-famfamfam.gif); } 
+
+.treeview .placeholder {
+	background: url(../img/ajax-loader.gif) 0 0 no-repeat;
+	height: 16px;
+	width: 16px;
+	display: block;
+}
+
+.filetree li { padding: 3px 0 2px 16px; }
+.filetree span.folder, .filetree span.file { padding: 1px 0 1px 16px; display: block; }
+.filetree span.folder { background: url(../img/treeview/folder.gif) 0 0 no-repeat; }
+.filetree li.expandable span.folder { background: url(../img/folder-closed.gif) 0 0 no-repeat; }
+.filetree span.file { background: url(../img/file.gif) 0 0 no-repeat; }

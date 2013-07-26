@@ -1,0 +1,67 @@
+/* CREATING YOUR OWN FONTS AND CONVERTING THEM TO ICON-CLASSES */
+/* Full Documentation by David Zhang */
+
+
+/* Step 1: Using Inkscape */
+
+Fonts are drawn from SVG files. Scalable Vector Graphics, an XML based vector image format for tow-dimensional graphics that supports interactivity and animation. This is generally much more flexible, dynamic, and more easily manipulated than image files. (SVG are not images.)
+To draw your own SVG files, download Inkscape. Inkscape is an open source vector graphics editor that has many powerful features.
+Inkscape includes Paths, Rectangles, Ellipses, 3D Boxes, Spirals, Text etc, that allows for virtually any picture to be drawn. Inkscape can only open and 
+export SVG files. If you have an image file that you would like to convert to SVG, go to "http://image.online-convert.com/convert-to-svg" to convert the image 
+to an SVG file so you can run it in Inkscape.
+
+
+/* Step 2: Icomoon and Font-Squirrel */
+
+Now that you have your SVG file, you can either use Icomoon or Font-Squirrel to create your own font. 
+
+STANDARD METHOD
+Icomoon is the much easier and intuitive method.
+Icomoon is recommend over Font-Squirrel unless the SVG file cannot be imported into Icomoon. Go to "http://icomoon.io/" and use the IcoMoon App. This application allows you to not only browse thousands of free vector icons, but also allows you to import your own vectors. Click Import Icons; at this step,
+if an error occurs and the file is not accepted, move onto use Font-Squirrel. After importing your SVG file, you can edit it on IcoMoon. The SVG can be edited bit by bit on Icomoon. Set the encoding to "Basic Latin" and set any matching string of your choice to the vector. After editing the vector files, click download
+to get the full package containing all of the converted fonts: SVG, TTF, WOFF, and EOF, along with the CSS template for your font face.
+
+ALTERNATIVE METHOD
+If Icomoon doesn't accept the file, Font-Squirrel can be used to give a complete font package. First you must manually set the matching string for your SVG file in Inkscape. Go to Text/SVG Font Editor. In there, you can set your own glyph unicode and matching string to the vector graphic. After editing the font, go to   "http://www.fontconverter.org/" to convert the SVG file into TTF (Font-Squirrel only accepts TTF files). Font Converter  also has the option of converting SVG into WOFF, and EOF in one go if you want to. However, it is suggested that you use Font-Squirrel to get the full package, which includes a CSS template. Simply use the Font-Face generator at "http://www.fontsquirrel.com/fontface/generator" to create a full package by uploading the TTF file. Note: at this step, you should end up with exactly what Icomoon would give you had you chosen the other method. 
+
+
+/* The purpose of the font package */
+
+TrueType Fonts ==> for Firefox 3.5+ , Opera 10+, Safari 3.1+, Chrome 4.0.249.4+
+EOT fonts ==> for Internet Explorer 4+
+WOFF fonts ==> for Firefox 3.6+, Internet Explorer 9+, Chrome 5+
+SVG fonts ==> for iPad and iPhone
+
+
+/* Step 3: Font Package and Font-Face Syntax */
+
+After obtaining the full package of fonts, save all of the font files (SVG, TTF, EOF, WOFF) into TS_helper/public/font.
+Up-to-date @Font Face syntax can be found at "http://css3please.com/"
+Edit the CSS file with the @Font-Face syntax:
+
+	@font-face {
+	font-family: 'example';
+	src:url('......./example.eot');
+	src:url('......./example.eot?#iefix') format('embedded-opentype'),
+		url('......./example.woff') format('woff'),
+		url('......./example.ttf') format('truetype'),
+		url('......./example.svg#icomoon') format('svg');
+	font-weight: .....;
+	font-style: ......;
+	font-size: .......;
+	}
+
+set the url to the source where the font files are saved, and set the weight, style, size etc. of the font.
+Save the CSS file into TS_helper/public/CSS. Change and edit the names of the icon classes to your choice in 
+the CSS file. (See w3schools CSS for icon creation syntax.) Now you are free to display your icon anywhere you 
+want in a new html file.
+
+
+There are thousands of copyright-free fonts at:
+http://icons.mysitemyway.com/
+
+
+
+
+
+
