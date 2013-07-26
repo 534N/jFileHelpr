@@ -4,7 +4,7 @@ jFileHelpr is extracted from a project I built for the company based on the jFil
 
 
 ## Prerequisite
-1. PHP 5.5
+1. PHP 5.4
 2. MySQL 5.5 (optional)
 
 ## To get a feel of it
